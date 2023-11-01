@@ -1,6 +1,11 @@
 import "./index.css";
+import React, { useState, useEffect } from "react";
+import Profile from "./Profile";
+import SearchBar from "./SearchBar";
 
 function App() {
+  const [username, setUsername] = useState("octocat");
+
   function switchTheme(theme) {
     document.documentElement.setAttribute("data-theme", theme);
   }
@@ -26,13 +31,8 @@ function App() {
           <button onClick={() => switchTheme("light")}>Light</button>
           <button onClick={() => switchTheme("dark")}>Dark</button>
         </div>
-        <div className="searchBar">
-          <input type="text" placeholder="Search Github username..."></input>
-          <button>Search</button>
-        </div>
-        <div className="profile">
-          <img src=""></img>
-        </div>
+        <SearchBar setUsername={setUsername} />
+        <Profile username={username} />{" "}
       </div>
     </>
   );
