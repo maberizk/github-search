@@ -17,18 +17,6 @@
   margin: 0;
   padding: 0;
 }
-/* 
-:root {
-  --color-background: var(--offWhite);
-  --color-text: var(--railings);
-  --body-color: var(--babyBlue);
-}
-
-[data-theme="dark"] {
-  --color-background: var(--pureBlack);
-  --color-text: var(--pureWhite);
-  --body-color: var(--offBlack);
-} */
 
 :root {
   --color-background: var(--pureBlack);
@@ -52,8 +40,36 @@
 .heading {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 10%;
+  margin-bottom: 4%;
+  font-size: 0.8rem;
 }
 
 .body {
   width: 50%;
+}
+
+.themeBtn {
+  border: none;
+  background-color: transparent;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+}
+
+.buttonDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.themeIcon {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-left: 10%;
 }

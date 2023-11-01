@@ -23,21 +23,32 @@ function App() {
           color: "var(--color-text)",
         }}
       >
-        <div className="body"
-         style={{
-          backgroundColor: "var(--body-color)",
-          color: "var(--color-text)",
-        }}>
+        <div
+          className="body"
+    
+        >
           <div className="heading">
             <h1>devFinder</h1>
             {theme === "light" ? (
-              <button onClick={switchTheme}>
-                Dark <img src={moonIcon} alt="moon" />
-              </button>
+              <div className="buttonDiv">
+                <button
+                  onClick={switchTheme}
+                  className="themeBtn"
+                  style={{
+                    color: "var(--button-text)",
+                  }}
+                >
+                  Dark
+                </button>
+                <img src={moonIcon} alt="moon" className="themeIcon"/>
+              </div>
             ) : (
-              <button onClick={switchTheme}>
-                Light <img src={sunIcon} alt="sun" />
-              </button>
+              <div className="buttonDiv">
+                <button onClick={switchTheme} className="themeBtn">
+                  Light
+                </button>
+                <img src={sunIcon} alt="sun" className="themeIcon" />
+              </div>
             )}
           </div>
           <SearchBar setUsername={setUsername} />

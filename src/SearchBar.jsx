@@ -8,7 +8,14 @@ const SearchBar = ({ setUsername }) => {
 
   return (
     <div>
-      <form onSubmit={handleSearch} className="searchBar">
+      <form
+        onSubmit={handleSearch}
+        className="searchBar"
+        style={{
+          backgroundColor: "var(--body-color)",
+          color: "var(--color-text)",
+        }}
+      >
         <input
           type="text"
           name="username"
