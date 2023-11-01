@@ -2,19 +2,16 @@ import "./index.css";
 import React, { useState, useEffect } from "react";
 import Profile from "./Profile";
 import SearchBar from "./SearchBar";
-
+import sunIcon from "./assets/icon-sun.svg";
+import moonIcon from "./assets/icon-moon.svg";
 function App() {
   const [username, setUsername] = useState("octocat");
+  const [theme, setTheme] = useState("dark");
 
-  function switchTheme(theme) {
-    document.documentElement.setAttribute("data-theme", theme);
-  }
-
-  if (
-    window.matchMedia &&
-    window.matchMedia("(prefers-color-scheme: dark)").matches
-  ) {
-    switchTheme("dark");
+  function switchTheme() {
+    const newTheme = theme === "dark" ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme", newTheme);
+    setTheme(newTheme);
   }
 
   return (
@@ -26,13 +23,26 @@ function App() {
           color: "var(--color-text)",
         }}
       >
-        <div className="heading">
-          <h1>devFinder</h1>
-          <button onClick={() => switchTheme("light")}>Light</button>
-          <button onClick={() => switchTheme("dark")}>Dark</button>
+        <div className="body"
+         style={{
+          backgroundColor: "var(--body-color)",
+          color: "var(--color-text)",
+        }}>
+          <div className="heading">
+            <h1>devFinder</h1>
+            {theme === "light" ? (
+              <button onClick={switchTheme}>
+                Dark <img src={moonIcon} alt="moon" />
+              </button>
+            ) : (
+              <button onClick={switchTheme}>
+                Light <img src={sunIcon} alt="sun" />
+              </button>
+            )}
+          </div>
+          <SearchBar setUsername={setUsername} />
+          <Profile username={username} />{" "}
         </div>
-        <SearchBar setUsername={setUsername} />
-        <Profile username={username} />{" "}
       </div>
     </>
   );

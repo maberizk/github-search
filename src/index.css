@@ -14,22 +14,46 @@
 
 * {
   font-family: "Space Mono", monospace;
-  color: var(--brightBlue);
   margin: 0;
   padding: 0;
 }
-
+/* 
 :root {
   --color-background: var(--offWhite);
   --color-text: var(--railings);
+  --body-color: var(--babyBlue);
 }
 
 [data-theme="dark"] {
   --color-background: var(--pureBlack);
   --color-text: var(--pureWhite);
+  --body-color: var(--offBlack);
+} */
+
+:root {
+  --color-background: var(--pureBlack);
+  --color-text: var(--pureWhite);
+  --body-color: var(--offBlack);
+}
+
+[data-theme="light"] {
+  --color-background: var(--offWhite);
+  --color-text: var(--railings);
+  --body-color: var(--babyBlue);
 }
 
 .app {
   height: 100vh;
   width: 100wv;
+  display: flex;
+  justify-content: center;
+}
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+}
+
+.body {
+  width: 50%;
 }
