@@ -8,7 +8,6 @@ const SearchBar = ({ setUsername }) => {
   };
 
   return (
-    // <div>
     <form
       onSubmit={handleSearch}
       className="searchBar"
@@ -33,7 +32,6 @@ const SearchBar = ({ setUsername }) => {
         Search
       </button>
     </form>
-    // </div>
   );
 };
 
