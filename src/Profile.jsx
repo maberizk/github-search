@@ -1,4 +1,8 @@
 import React, { useState, useEffect } from "react";
+import locationIcon from "./assets/icon-location.svg";
+import companyIcon from "./assets/icon-company.svg";
+import twittterIcon from "./assets/icon-twitter.svg";
+import websiteIcon from "./assets/icon-website.svg";
 
 const Profile = ({ username }) => {
   const [user, setUser] = useState(null);
@@ -63,12 +67,24 @@ const Profile = ({ username }) => {
       </div>
       <div className="links">
         <div>
-          <p>{user.location}</p>
-          <p>{user.blog}</p>
+          <div className="linkContainer">
+            <img src={locationIcon} alt="locationIcon" className="linkIcon" />
+            <p>{user.location}</p>
+          </div>
+          <div className="linkContainer">
+            <img src={websiteIcon} alt="blogIcon" className="linkIcon" />
+            <p>{user.blog}</p>
+          </div>
         </div>
         <div>
-          <p>{user.twitter ? user.twiter : "Not Available"}</p>
-          <p>{user.company}</p>
+          <div className="linkContainer">
+            <img src={twittterIcon} alt="twitterIcon" className="linkIcon" />
+            <p>{user.twitter ? user.twiter : "Not Available"}</p>
+          </div>
+          <div className="linkContainer">
+            <img src={companyIcon} alt="companyIcon" className="linkIcon" />
+            <p>{user.company}</p>
+          </div>
         </div>
       </div>
     </div>
