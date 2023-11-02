@@ -127,6 +127,7 @@ input {
 
 .userImg {
   width: 7rem;
+  height: 7rem;
   border-radius: 100px;
   margin-right: 40px;
 }
@@ -134,16 +135,18 @@ input {
 .userDetails {
   display: flex;
   flex-direction: row;
-  /* justify-content: space-between; */
   padding: 6%;
   padding-bottom: 0;
-  /* width: 100%; */
 }
 
 .githubDetails {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  width: 350px;
+  margin: 40px 0 40px 190px;
+  padding: 2% 15% 2% 5%;
+  border-radius: 10px;
 }
 
 .links {
@@ -165,21 +168,35 @@ p {
   font-weight: 100;
 }
 
-.details {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-}
-
 .mainDetails {
   display: flex;
   flex-direction: column;
 }
 
-.detailsWithDate {
+.detailswithDate {
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  align-items: baseline;
   flex-direction: row;
+}
+
+.detailsWBio {
+  width: 100%;
+}
+
+.bio {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  word-wrap: break-word;
+}
+
+.title {
+  font-size: 0.8rem;
+  font-weight: 100;
+}
+
+.numbers {
+  font-size: 1.5rem;
 }
