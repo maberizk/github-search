@@ -21,7 +21,7 @@ const SearchBar = ({ setUsername }) => {
         <input
           type="text"
           name="username"
-          placeholder="Search Github username..."
+          placeholder="Search GitHub username..."
           className="inputField"
           style={{
             color: "var(--color-text)",

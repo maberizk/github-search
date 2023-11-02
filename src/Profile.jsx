@@ -29,12 +29,21 @@ const Profile = ({ username }) => {
     >
       <div className="userDetails">
         <img src={user.avatar_url} alt="User avatar" className="userImg" />
-        <div>
-          <h1>{user.name}</h1>
-          <p>@{user.login}</p>
-          <p>{user.bio ? user.bio : "This profile has no bio"}</p>
+        <div className="detailsWBio">
+          <div className="details">
+            <div className="detailswithDate">
+              <div className="mainDetails">
+                <h1 className="userName">{user.name}</h1>
+                <p className="login">@{user.login}</p>
+              </div>
+              <p>{formattedDate}</p>
+            </div>
+          </div>
+
+          <p className="bio">
+            {user.bio ? user.bio : "This profile has no bio"}
+          </p>
         </div>
-        <p>{formattedDate}</p>
       </div>
       <div className="githubDetails">
         <div>

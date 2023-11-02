@@ -128,12 +128,16 @@ input {
 .userImg {
   width: 7rem;
   border-radius: 100px;
+  margin-right: 40px;
 }
 
 .userDetails {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  padding: 6%;
+  padding-bottom: 0;
+  /* width: 100%; */
 }
 
 .githubDetails {
@@ -146,4 +150,36 @@ input {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+}
+
+.userName {
+  font-size: 1.5rem;
+}
+
+.login {
+  color: var(--brightBlue);
+  padding-bottom: 16px;
+}
+
+p {
+  font-weight: 100;
+}
+
+.details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.mainDetails {
+  display: flex;
+  flex-direction: column;
+}
+
+.detailsWithDate {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  flex-direction: row;
 }
