@@ -24,14 +24,18 @@
   --body-color: var(--offBlack);
   --placeholder-color: var(--pureWhite);
   --hover-icon: var(--navy);
+  --button-text: var(--offWhite);
+  --h1-color: var(--pureWhite);
 }
 
 [data-theme="light"] {
   --color-background: var(--babyBlue);
-  --color-text: var(--railings);
+  --color-text: var(--navy);
   --body-color: var(--offWhite);
   --placeholder-color: var(--navy);
   --hover-icon: var(--pureBlack);
+  --button-text: var(--navy);
+  --h1-color: var(--railings);
 }
 
 [data-theme="dark"] .inputField::placeholder {
@@ -40,6 +44,16 @@
 
 [data-theme="light"] .inputField::placeholder {
   color: var(--placeholder-color);
+}
+
+.themeBtn:hover,
+.themeBtn:hover .themeIcon {
+  color: var(--hover-icon);
+  fill: var(--hover-icon);
+}
+
+h1 {
+  color: var(--h1-color);
 }
 
 .app {
@@ -70,23 +84,13 @@
 .themeBtn {
   border: none;
   background-color: transparent;
-  color: white;
+  color: var(--button-text);
   display: flex;
   justify-content: center;
-  align-items: center;
-  width: 50px;
-  height: 50px;
-}
-
-.buttonDiv {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  align-items: start;
 }
 
 .themeIcon {
-  width: 1.25rem;
-  height: 1.25rem;
   margin-left: 10%;
 }
 
@@ -207,7 +211,6 @@ p {
   padding-left: 194px;
   position: relative;
   top: -32px;
-  /* padding-bottom: 20px; */
 }
 
 .greyedOut {
