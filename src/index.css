@@ -105,10 +105,15 @@ form {
   border-radius: 10px;
 }
 
+.searchBtn:hover {
+  background-color: #60abff;
+}
+
 input {
   width: 500px;
   background-color: transparent;
   border: none;
+  outline: none;
 }
 
 .inputField::placeholder {
@@ -349,5 +354,11 @@ p {
 
   .links {
     flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .body {
+    width: 770px;
   }
 }

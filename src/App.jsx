@@ -7,6 +7,7 @@ import moonIcon from "./assets/icon-moon.svg";
 function App() {
   const [username, setUsername] = useState("octocat");
   const [theme, setTheme] = useState("dark");
+  const [error, setError] = useState(null);
 
   function switchTheme() {
     const newTheme = theme === "dark" ? "light" : "dark";
@@ -23,10 +24,7 @@ function App() {
           color: "var(--color-text)",
         }}
       >
-        <div
-          className="body"
-    
-        >
+        <div className="body">
           <div className="heading">
             <h1>devFinder</h1>
             {theme === "light" ? (
@@ -40,7 +38,7 @@ function App() {
                 >
                   Dark
                 </button>
-                <img src={moonIcon} alt="moon" className="themeIcon"/>
+                <img src={moonIcon} alt="moon" className="themeIcon" />
               </div>
             ) : (
               <div className="buttonDiv">
@@ -51,8 +49,8 @@ function App() {
               </div>
             )}
           </div>
-          <SearchBar setUsername={setUsername} />
-          <Profile username={username} />{" "}
+          <SearchBar setUsername={setUsername} error={error} />
+          <Profile username={username} setError={setError} />{" "}
         </div>
       </div>
     </>

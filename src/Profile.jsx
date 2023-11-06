@@ -1,17 +1,26 @@
 import React, { useState, useEffect } from "react";
-import locationIcon from "./assets/icon-location.svg";
-import companyIcon from "./assets/icon-company.svg";
-import twittterIcon from "./assets/icon-twitter.svg";
-import websiteIcon from "./assets/icon-website.svg";
 
 const Profile = ({ username }) => {
   const [user, setUser] = useState(null);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     fetch(`https://api.github.com/users/${username}`)
       .then((response) => response.json())
-      .then((data) => setUser(data));
-  }, [username]);
+      .then((data) => {
+        if (data.message === "Not Found") {
+          setError("No results");
+          setUser(null);
+        } else {
+          setUser(data);
+          setError(null);
+        }
+      });
+  }, [username, setError]);
+
+  if (error) {
+    return <div>{error}</div>;
+  }
 
   if (!user) {
     return <div>Loading...</div>;
