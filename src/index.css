@@ -219,11 +219,6 @@ p {
   padding-right: 20px;
 }
 
-/* .userDetailsAll {
-  position: relative;
-  top: -1px;
-} */
-
 /* @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) { */
 @media only screen and (max-device-width: 1024px) {
   input {
@@ -241,15 +236,19 @@ p {
   .detailswithDate {
     flex-direction: column;
   }
+  .date {
+    position: relative;
+    top: -20px;
+  }
 
   .login {
-    padding-bottom: 2%;
+    padding-top: 2%;
   }
 
   .bio {
     width: 100%;
     position: static;
-    padding: 42px;
+    padding: 32px 42px;
     max-width: 530px;
   }
 
@@ -263,5 +262,92 @@ p {
     margin: 0 42px;
     width: 80%;
   }
+}
 
+@media only screen and (max-device-width: 767px) {
+  .githubDetails {
+    margin: 0 6% 8% 6%;
+    width: 250px;
+    padding: 6% 8%;
+  }
+
+  .app {
+    height: 100%;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  .body {
+    width: 90%;
+  }
+
+  .searchContainer {
+    padding-left: 12px;
+    width: 100%;
+  }
+
+  .profile {
+    margin-bottom: 10%;
+  }
+
+  .searchIcon {
+    padding-right: 3%;
+    height: 18px;
+  }
+
+  .searchBtn {
+    padding: 4% 5%;
+  }
+
+  .inputField::placeholder {
+    font-size: 0.8rem;
+  }
+
+  .heading {
+    padding-bottom: 5%;
+  }
+
+  .userImg {
+    margin-right: 20px;
+    height: 5rem;
+    width: auto;
+  }
+
+  .userName {
+    font-size: 1rem;
+  }
+
+  .date {
+    position: static;
+  }
+
+  .login {
+    padding-bottom: 8px;
+  }
+
+  p {
+    font-size: 0.8rem;
+  }
+
+  .bio {
+    padding: 8% 6%;
+    max-width: 300px;
+  }
+
+  .numbers {
+    font-size: 1.3rem;
+    padding-top: 10%;
+  }
+
+  .repoDetails {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .links {
+    flex-direction: column;
+  }
 }

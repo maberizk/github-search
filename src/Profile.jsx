@@ -31,36 +31,33 @@ const Profile = ({ username }) => {
         color: "var(--color-text)",
       }}
     >
-      {/* <div className="userDetailsAll"> */}
+      {" "}
       <div className="userDetails">
         <img src={user.avatar_url} alt="User avatar" className="userImg" />
-        {/* <div className="detailsWBio"> */}
         <div className="detailswithDate">
           <div className="mainDetails">
             <h1 className="userName">{user.name}</h1>
             <p className="login">@{user.login}</p>
           </div>
-          <p>{formattedDate}</p>
+          <p className="date">{formattedDate}</p>
         </div>
-        {/* </div> */}
       </div>
       <p className="bio">{user.bio ? user.bio : "This profile has no bio"}</p>
-      {/* </div> */}
       <div
         className="githubDetails"
         style={{
           backgroundColor: "var(--color-background)",
         }}
       >
-        <div>
+        <div className="repoDetails">
           <p className="title">Repos</p>
           <p className="numbers">{user.public_repos}</p>
         </div>
-        <div>
+        <div className="repoDetails">
           <p className="title">Followers</p>
           <p className="numbers">{user.followers}</p>
         </div>
-        <div>
+        <div className="repoDetails">
           <p className="title">Following</p>
           <p className="numbers">{user.following}</p>
         </div>
