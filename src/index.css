@@ -148,7 +148,7 @@ input {
   flex-direction: row;
   justify-content: space-between;
   width: 350px;
-  margin: 40px 0 40px 190px;
+  margin: 0 0 40px 190px;
   padding: 2% 15% 2% 5%;
   border-radius: 10px;
 }
@@ -184,9 +184,6 @@ p {
   justify-content: space-between;
   align-items: baseline;
   flex-direction: row;
-}
-
-.detailsWBio {
   width: 100%;
 }
 
@@ -196,6 +193,10 @@ p {
   flex-direction: column;
   flex-wrap: wrap;
   word-wrap: break-word;
+  padding-left: 194px;
+  position: relative;
+  top: -32px;
+  /* padding-bottom: 20px; */
 }
 
 .title {
@@ -218,3 +219,36 @@ p {
   padding-right: 20px;
 }
 
+/* .userDetailsAll {
+  position: relative;
+  top: -1px;
+} */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  input {
+    width: 300px;
+  }
+
+  .app {
+    width: 100%;
+  }
+
+  .body {
+    width: 80%;
+  }
+
+  .detailswithDate {
+    flex-direction: column;
+  }
+
+  .login {
+    padding-bottom: 2%;
+  }
+
+  .bio {
+    width: 100%;
+    position: static;
+    padding: 42px;
+    max-width: 530px;
+  }
+}

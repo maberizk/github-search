@@ -31,21 +31,21 @@ const Profile = ({ username }) => {
         color: "var(--color-text)",
       }}
     >
+      {/* <div className="userDetailsAll"> */}
       <div className="userDetails">
         <img src={user.avatar_url} alt="User avatar" className="userImg" />
-        <div className="detailsWBio">
-          <div className="detailswithDate">
-            <div className="mainDetails">
-              <h1 className="userName">{user.name}</h1>
-              <p className="login">@{user.login}</p>
-            </div>
-            <p>{formattedDate}</p>
+        {/* <div className="detailsWBio"> */}
+        <div className="detailswithDate">
+          <div className="mainDetails">
+            <h1 className="userName">{user.name}</h1>
+            <p className="login">@{user.login}</p>
           </div>
-          <p className="bio">
-            {user.bio ? user.bio : "This profile has no bio"}
-          </p>
+          <p>{formattedDate}</p>
         </div>
+        {/* </div> */}
       </div>
+      <p className="bio">{user.bio ? user.bio : "This profile has no bio"}</p>
+      {/* </div> */}
       <div
         className="githubDetails"
         style={{
