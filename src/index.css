@@ -23,6 +23,7 @@
   --color-text: var(--pureWhite);
   --body-color: var(--offBlack);
   --placeholder-color: var(--pureWhite);
+  --hover-icon: var(--navy);
 }
 
 [data-theme="light"] {
@@ -30,6 +31,7 @@
   --color-text: var(--railings);
   --body-color: var(--offWhite);
   --placeholder-color: var(--navy);
+  --hover-icon: var(--pureBlack);
 }
 
 [data-theme="dark"] .inputField::placeholder {
@@ -166,6 +168,10 @@ input {
   margin-left: 120px;
 }
 
+.linkContainer:hover {
+  text-decoration: underline;
+}
+
 .userName {
   font-size: 1.5rem;
 }
@@ -204,6 +210,11 @@ p {
   /* padding-bottom: 20px; */
 }
 
+.greyedOut {
+  color: var(--slateGrey);
+  fill: var(--slateGrey);
+}
+
 .title {
   font-size: 0.8rem;
   font-weight: 100;
@@ -222,6 +233,10 @@ p {
 .linkIcon {
   height: 20px;
   padding-right: 20px;
+}
+
+.errorMessage {
+  display: hidden;
 }
 
 /* @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) { */
