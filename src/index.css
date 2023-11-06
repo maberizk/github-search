@@ -224,7 +224,8 @@ p {
   top: -1px;
 } */
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+/* @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) { */
+@media only screen and (max-device-width: 1024px) {
   input {
     width: 300px;
   }
@@ -251,4 +252,16 @@ p {
     padding: 42px;
     max-width: 530px;
   }
+
+  .githubDetails {
+    margin: 0 42px 42px 42px;
+    width: 410px;
+  }
+
+  .links {
+    justify-content: space-between;
+    margin: 0 42px;
+    width: 80%;
+  }
+
 }
