@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import searchIcon from "./assets/icon-search.svg";
 
-const SearchBar = ({ setUsername, error }) => {
+const SearchBar = ({ setUsername }) => {
   const [inputValue, setInputValue] = useState("");
 
   const handleSearch = (event) => {
@@ -18,7 +18,7 @@ const SearchBar = ({ setUsername, error }) => {
           type="text"
           name="username"
           placeholder={
-            inputValue || "Search GitHub username..." || { errorMessage }
+            inputValue || "Search GitHub username..."
           }
           className="inputField"
           style={{

@@ -35,3 +35,25 @@ The GitHub users API endpoint is `https://api.github.com/users/:username`. So, i
 - If a GitHub user's bio is empty, show the text "This profile has no bio" with transparency added (as shown in the design). The lorem ipsum text in the designs shows how the bio should look when it is present.
 - If any of the location, website, twitter, or company properties are empty, show the text "Not Available" with transparency added (as shown in the design).
 - Website, twitter, and company information should all be links to those resaources. For the company link, it should remove the `@` symbol and link to the company page on GitHub. For Octocat, with `@github` being returned for the company, this would lead to a URL of `https://github.com/github`.
+
+<h3>Completed Project<h3>
+<p align="center">
+Desktop
+<img src="/src/assets/desktop_dark.png">
+
+<img src="/src/assets/desktop_light.png">
+
+Tablet
+<img src="/src/assets/ipad_dark.png">
+<img src="/src/assets/ipad_light.png">
+
+Mobile
+<img src="/src/assets/mobile_dark.png">
+<img src="/src/assets/mobile_light.png">
+<br>
+
+Error State
+<br>
+<img src="/src/assets/error.png">
+
+</p>

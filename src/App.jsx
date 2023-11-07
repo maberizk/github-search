@@ -1,5 +1,5 @@
 import "./index.css";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Profile from "./Profile";
 import SearchBar from "./SearchBar";
 function App() {
